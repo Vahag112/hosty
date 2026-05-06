@@ -112,10 +112,11 @@ header.hide {
 
 
         nav {
+
             padding-top: 30px;
             padding-bottom: 60px;
             width: 300px;
-            position: absolute;
+            position: fixed;
             top: 0px;
             left: 0;
             background: #1A4F7D;
@@ -124,7 +125,7 @@ header.hide {
             justify-content: center;
             transform: translateX(-120%);
             transition: .3s ease;
-            z-index: 800;
+            z-index: 1001;
 
 
             .delete {
