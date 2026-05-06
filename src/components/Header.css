@@ -40,7 +40,7 @@ header {
 
 
 
-            li>a {
+            li {
                 text-decoration: none;
                 color: white;
                 font-size: 18px;
@@ -49,7 +49,7 @@ header {
             }
 
 
-            li a::after {
+            li::after {
                 content: '';
                 position: absolute;
                 width: 0;
@@ -61,7 +61,7 @@ header {
                 transform: translateX(-50%);
             }
 
-            li a:hover::after {
+            li:hover::after {
                 width: 100%;
             }
 
@@ -95,7 +95,7 @@ header.hide {
         ul {
 
 
-            li>a {
+            li {
                 font-size: 17px;
             }
         }
@@ -103,7 +103,7 @@ header.hide {
 }
 
 
-@media(max-width:925px) {
+@media(max-width:950px) {
     header>.container {
 
         .bars {
@@ -147,7 +147,7 @@ header.hide {
 
                 }
 
-                li a::after {
+                li::after {
                     display: none;
                 }
 

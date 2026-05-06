@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import './Myteam.css'
 import i1 from '../forAll/all/people1.png'
 import i2 from '../forAll/all/people2.png'

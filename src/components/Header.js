@@ -41,7 +41,7 @@ export default function Header() {
     return (
         <header ref={headerRef}>
             <div className="container">
-                <a href="#"> <img src={logo} alt="" /></a>
+             <img src={logo} alt="" />
                 <nav ref={nav}>
                     <ul>
                         <div className="detal">
@@ -51,7 +51,7 @@ export default function Header() {
                         {
                             navList.map((elem, index) => {
                                 return (
-                                    <li key={index}><a href="#">{elem}</a></li>
+                                    <li key={index}>{elem}</li>
                                 )
                             })
                         }

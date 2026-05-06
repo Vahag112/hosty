@@ -17,10 +17,10 @@ export default function About() {
                     </div>
                 </div>
                 <div className="imgDiv">
-                    <img src={i1} />
+                    <img src={i1} alt=''/>
                 </div>
-                <img src={i2} className='img3' />
-                <img src={i1} className='img2' />
+                <img src={i2} alt='' className='img3' />
+                <img src={i1} alt='' className='img2' />
 
             </div>
         </div>
