@@ -5,7 +5,7 @@
       "headers": [
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.vercel.com vercel.live; font-src 'self' *.vercel.com *.gstatic.com vercel.live data:; style-src 'self' 'unsafe-inline' *.googleapis.com; img-src 'self' data:;"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.vercel.com vercel.live https://maps.googleapis.com; font-src 'self' *.vercel.com *.gstatic.com vercel.live data:; style-src 'self' 'unsafe-inline' *.googleapis.com https://fonts.googleapis.com; img-src 'self' data: https://*.googleapis.com https://*.gstatic.com https://*.google.com https://*.google.am; frame-src 'self' https://www.google.com https://www.google.am;"
         }
       ]
     }

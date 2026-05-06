@@ -163,11 +163,11 @@ header.hide {
                     }
 
                     .delete {
-                        display: flex;
+                        display: flex !important;
                     }
 
                     img {
-                        display: flex;
+                        display: flex !important;
                     }
                 }
             }
