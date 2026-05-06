@@ -1,0 +1,13 @@
+.App{
+    position: relative;
+    overflow: hidden;
+    font-family: sans-serif;
+
+}
+
+.container{
+    max-width: 1400px;
+    min-width: 350px;
+    width: 95%;
+    margin: 0 auto;
+}

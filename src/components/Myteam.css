@@ -1,0 +1,201 @@
+.myteam {
+    padding-top: 70px;
+    padding-bottom: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        padding-bottom: 40px;
+        h2 {
+            font-size: 50px;
+        }
+
+
+        .right,
+        .left {
+            display: none;
+            font-size: 50px;
+            color: #1A4F7D;
+            position: absolute;
+        }
+
+        .content {
+            width: 100%;
+            height: 450px;
+            /* border: 1px solid #000; */
+
+            .detal {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                align-items: end;
+                height: 400px;
+
+
+
+                .item {
+                    position: relative;
+                    height: 300px;
+                    width: 280px;
+                    background-size: cover;
+                    border-radius: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+
+                    .box {
+                        position: absolute;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        width: 210px;
+                        height: 80px;
+                        border-radius: 10px;
+                        background: white;
+                        bottom: -40px;
+                        gap: 5px;
+                        box-shadow: 0 6px 5px rgba(0, 0, 0, 0.15);
+
+
+                        h3 {
+                            font-size: 20px;
+
+                        }
+
+                        span {
+                            font-size: 17px;
+                            color: gray;
+                        }
+                    }
+                }
+
+
+                .item:nth-of-type(2) {
+                    max-width: 400px;
+                    width: 100%;
+                    height: 100%;
+
+                    .box {
+                        width: 250px;
+
+                        h3 {
+                            font-size: 22px;
+                        }
+
+                        span {
+                            font-size: 18px;
+                            color: gray;
+                        }
+                    }
+
+                }
+            }
+        }
+
+    }
+}
+
+
+
+
+
+@media(max-width: 1110px) {
+    .myteam>.container>.content>.detal {
+
+
+        .item {
+            width: 240px;
+            height: 260px;
+
+            .box {
+                width: 190px;
+                height: 70px;
+
+                h3 {
+                    font-size: 19px;
+                }
+
+                span {
+                    font-size: 16px;
+                }
+
+            }
+
+        }
+
+        .item:nth-of-type(2) {
+            max-width: 360px;
+            height: 360px;
+
+            .box {
+                width: 230px;
+
+                h3 {
+                    font-size: 21px;
+                }
+
+                span {
+                    font-size: 17px;
+                    color: gray;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 975px) {
+    .myteam>.container {
+        position: relative;
+
+        .left,
+        .right {
+            display: flex;
+            bottom: 35px;
+            z-index: 50;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            right: 0;
+        }
+
+        .content {
+            overflow: hidden;
+            width: 100%;
+            max-width: 400px;
+
+
+            .detal {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+                width: 300%;
+
+                .item {
+                    width: 100%; 
+                    max-width: 400px;
+                    height: 400px;
+                    background-size: cover !important;
+                }
+
+                .item:nth-of-type(2){
+                    max-width: 400px;
+                     width: 100%; 
+                    height: 400px;
+                    background-size: cover !important;
+                }
+            }
+        }
+    }
+}
