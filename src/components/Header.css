@@ -19,24 +19,27 @@ header {
 
 
 
-        .delete {
-            background: transparent;
-            color: white;
-            font-size: 40px;
-            display: none;
-        }
-
+        
         ul {
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 35px;
-
-
-
-            img {
+            
+           .detal{
                 display: none;
-            }
+               .delete {
+                   background: transparent;
+                   color: white;
+                   font-size: 40px;
+                   display: none;
+               }
+   
+   
+               img {
+                   display: none;
+               }
+           } 
 
 
 
@@ -128,18 +131,14 @@ header.hide {
             z-index: 1001;
 
 
-            .delete {
-                display: flex;
-            }
+
+
 
             ul {
                 flex-direction: column;
                 align-items: center;
                 gap: 30px;
 
-                img {
-                    display: flex;
-                }
 
                 li {
                     width: 100%;
@@ -152,15 +151,23 @@ header.hide {
                     display: none;
                 }
 
-            
+
                 .detal {
-                    display: flex;
+                    display: flex !important;
                     align-items: center;
                     gap: 25px;
                     margin-bottom: 25px;
 
                     svg {
                         margin-top: 15px;
+                    }
+
+                    .delete {
+                        display: flex;
+                    }
+
+                    img {
+                        display: flex;
                     }
                 }
             }
