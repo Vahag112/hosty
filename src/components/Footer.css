@@ -55,7 +55,7 @@ footer {
             justify-content: center;
             gap: 50px;
 
-            li{
+            li > a{
                 text-decoration: none;
                 color: black;
                 font-size: 18px;
@@ -63,7 +63,7 @@ footer {
                 padding-bottom: 5px;
             }
 
-            li::after {
+            li > a::after {
                 content: '';
                 position: absolute;
                 bottom: 0;
@@ -75,7 +75,7 @@ footer {
                 transition: all .3s ease-in-out;
             }
 
-            li:hover::after {
+            li >a:hover::after {
                 width: 100%;
             }
         }
@@ -148,7 +148,7 @@ footer {
         ul {
             gap: 30px;
 
-            li {
+            li > a {
                 font-size: 17px;
             }
         }
@@ -194,7 +194,7 @@ footer {
             ul {
                 column-gap: 25px;
 
-                li {
+                li > a {
                     font-size: 16px;
                 }
             }

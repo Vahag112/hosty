@@ -27,7 +27,7 @@ export default function Footer() {
           {
             list.map((elem, index) => {
               return (
-                <li key={index}>{elem}</li>
+                <li key={index}><a href="/">{elem}</a></li>
               )
             })
           }

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import './Header.css'
 import logo from '../forAll/icon/headerLogo.png'
 import { FaBars } from 'react-icons/fa'
@@ -8,25 +8,21 @@ import { useRef } from 'react';
 
 export default function Header() {
     const navList = ['Home', 'Service', 'Rooms', 'About Us', 'My team', 'Feedback', 'Contact Us']
-    const nav = useRef()
-    const headerRef = useRef()
+    const[list, setList] = useState(false)
+    const [hide,setHide] = useState(false)
+    const navRef = useRef()
     const barsRef = useRef()
 
 
     useEffect(() => {
         const handleClickOutside = (event) => {
-            if (nav.current && !nav.current.contains(event.target) && !barsRef.current.contains(event.target)) {
-                nav.current.classList.remove('active');
+            if (navRef.current && !navRef.current.contains(event.target) && barsRef.current && !barsRef.current.contains(event.target)) {
+                setList(false);
             }
-        };
+        }
 
         const handleScroll = () => {
-            if (window.scrollY > 500) {
-                headerRef.current.classList.add('hide')
-                
-            } else {
-                headerRef.current.classList.remove('hide')
-            }
+            setHide(window.scrollY > 500)
         }
         document.addEventListener('mousedown', handleClickOutside);
         window.addEventListener('scroll', handleScroll)
@@ -38,26 +34,42 @@ export default function Header() {
         } 
     }, [])
 
+
+    useEffect(() => {
+    if (list) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = 'auto';
+    }
+
+    return () => {
+        document.body.style.overflow = 'auto';
+    };
+}, [list]);
+
     return (
-        <header ref={headerRef}>
+        <header className={hide ? 'hide' : ''}>
             <div className="container">
              <img src={logo} alt="" />
-                <nav ref={nav}>
+             {list && <div className="overlay" onClick={() => setList(false)}></div>}
+                <nav className={list ? 'active' : ''} ref={navRef}>
                     <ul>
                         <div className="detal">
                             <img src={logo} alt="" />
-                            <button className='delete' onClick={() => nav.current.classList.remove('active')}><CiCircleRemove /></button>
+                            <button className='delete' onClick={() => setList(!list)}><CiCircleRemove /></button>
                         </div>
                         {
                             navList.map((elem, index) => {
                                 return (
-                                    <li key={index}>{elem}</li>
+                                    <li key={index}><a href="/">{elem}</a></li>
                                 )
                             })
                         }
                     </ul>
                 </nav>
-                <span className='bars' ref={barsRef} onClick={() => nav.current.classList.toggle('active')}><FaBars /></span>
+                <span className='bars' ref={barsRef} onClick={(e) => {
+                    setList(!list)
+                }}><FaBars /></span>
             </div>
         </header>
     )

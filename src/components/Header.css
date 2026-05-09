@@ -43,7 +43,7 @@ header {
 
 
 
-            li {
+            li a {
                 text-decoration: none;
                 color: white;
                 font-size: 18px;
@@ -52,7 +52,7 @@ header {
             }
 
 
-            li::after {
+            li >a::after {
                 content: '';
                 position: absolute;
                 width: 0;
@@ -64,7 +64,7 @@ header {
                 transform: translateX(-50%);
             }
 
-            li:hover::after {
+            li > a:hover::after {
                 width: 100%;
             }
 
@@ -83,7 +83,20 @@ header {
     }
 }
 
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 9; 
+    backdrop-filter: blur(5px); 
+}
 
+nav.active {
+    z-index: 10;
+}
 
 
 
@@ -98,7 +111,7 @@ header.hide {
         ul {
 
 
-            li {
+             li >a {
                 font-size: 17px;
             }
         }
@@ -119,7 +132,7 @@ header.hide {
             padding-top: 30px;
             padding-bottom: 60px;
             width: 300px;
-            position: fixed;
+            position: absolute;
             top: 0px;
             left: 0;
             background: #1A4F7D;
@@ -144,10 +157,9 @@ header.hide {
                     width: 100%;
                     border-bottom: 1px solid white;
                     padding-bottom: 7px;
-
                 }
 
-                li::after {
+                li > a::after {
                     display: none;
                 }
 
