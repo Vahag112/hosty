@@ -1,9 +1,20 @@
-*{
+* {
   margin: 0;
   padding: 0;
-  user-select: none;
   box-sizing: border-box;
   border: none;
   outline: none;
-   list-style: none;
+}
+
+img, svg, button{
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img{
+  -webkit-user-drag: none;
 }
